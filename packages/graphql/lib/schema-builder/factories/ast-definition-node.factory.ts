@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { isEmpty } from '@nestjs/common/utils/shared.utils';
 import {
-  ConstDirectiveNode,
+  DirectiveNode,
   FieldDefinitionNode,
   GraphQLInputType,
   GraphQLOutputType,
@@ -133,7 +133,7 @@ export class AstDefinitionNodeFactory {
 
   private createDirectiveNode(
     directive: DirectiveMetadata,
-  ): ConstDirectiveNode {
+  ): DirectiveNode {
     const parsed = parse(`type String ${directive.sdl}`);
     const definitions = parsed.definitions as ObjectTypeDefinitionNode[];
     const directives = definitions

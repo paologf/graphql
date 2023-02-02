@@ -104,9 +104,7 @@ export class GraphQLFederationFactory {
       'ApolloFederation',
       () => require('@apollo/subgraph'),
     );
-    const apolloSubgraphVersion = (
-      await import('@apollo/subgraph/package.json')
-    ).version;
+    const apolloSubgraphVersion = "0.6.1";
 
     const apolloSubgraphMajorVersion = Number(
       apolloSubgraphVersion.split('.')[0],

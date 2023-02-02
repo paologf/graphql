@@ -1,10 +1,5 @@
-import type {
-  GraphQLErrorOptions,
-  GraphQLErrorExtensions,
-} from 'graphql/error';
-
-export interface ExpcetionOptions extends GraphQLErrorOptions {
-  extensions: GraphQLErrorExtensions & {
+export interface ExpcetionOptions {
+  extensions: {
     http: {
       status: number;
     };
